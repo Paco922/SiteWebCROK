@@ -41,5 +41,16 @@ class DateTest {
         assertEquals(0, date1.compareTo(date3));
     }
 
+    @Test
+    void dateDuLendemain() {
+        Date date = new Date(2024, 3, 25);
+        Date nextDay = date.dateDuLendemain();
+        
+        // Test for the next day
+        assertEquals(26, nextDay.getJour());
+        assertEquals(3, nextDay.getMois());
+        assertEquals(2024, nextDay.getAnnee());
+    }
+
     
 }
