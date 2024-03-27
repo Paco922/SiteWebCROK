@@ -52,5 +52,14 @@ class DateTest {
         assertEquals(2024, nextDay.getAnnee());
     }
 
-    
+    @Test
+    void dateDeLaVeille() {
+        Date date = new Date(2024, 3, 25);
+        Date previousDay = date.dateDeLaVeille();
+        
+        // Test for the previous day
+        assertEquals(24, previousDay.getJour());
+        assertEquals(3, previousDay.getMois());
+        assertEquals(2024, previousDay.getAnnee());
+    }
 }
