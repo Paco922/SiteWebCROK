@@ -23,4 +23,22 @@ public class Date {
         return false;
     }
 
+    public static int dernierJourMois(int parMois, int parAnnee) {
+        if ( parMois > 12) { return 0;}
+        if (parMois < 1) { return 0;}
+        switch (parMois) {
+            case 2:
+                if (Date.estBissextile(parAnnee)) {
+                    return 29;
+            }
+                return 28;
+            case 4 : case 6: case 9: case 11:
+                return 30;
 
+        default:
+            return 31;
+        }
+    }
+
+    
+}
