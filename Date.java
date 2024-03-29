@@ -40,5 +40,37 @@ public class Date {
         }
     }
 
+   
+ /** compareTo compare l'obje appelant (this) avec parDate
+     * @return 0  si elles sont égales
+     *         1 si this est plus grande que parDate
+     *         -1 si this est plus petite que parDate
+     */
+    public int compareTo(Date parDate) {
+        if (this.chAnnee > parDate.chAnnee) {
+            return 1;
+        }
+        if (this.chAnnee < parDate.chAnnee) {
+            return -1;
+        }
+        if (this.chMois > parDate.chMois) {
+                return 1;
+            }
+        if (this.chMois < parDate.chMois) {
+                return -1;
+            }
+        if (this.chJour > parDate.chJour) {
+                return 1;
+            }
+        if (this.chJour < parDate.chJour)
+                    return -1;
+
+        return 0;
+
+
+
+        }
+
     
+
 }
