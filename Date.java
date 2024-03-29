@@ -88,6 +88,22 @@ public class Date {
         return new Date(1, chMois+1, chAnnee);
     }
 
+    /** dateDeLaVeille renvoie la date de la veille de l'objet appelant
+     *
+     * @return Date
+     */
+    public Date dateDeLaVeille(){
+        if (chJour == 1) {
+            if (chMois == 1)
+                return new Date(31, 12, chAnnee - 1);
+            return new Date(Date.dernierJourMois(chMois - 1, chAnnee), chMois - 1, chAnnee);
+        }
+        return new Date(chJour-1,chMois, chAnnee);
+    }
+    public String toString() {
+        return chJour + "/" + chMois + "/" + chAnnee;
+    }
+
     
 
 }
