@@ -40,7 +40,16 @@ public class Date {
         }
     }
 
-   
+    public static Date lireDate() {
+        Scanner scanner = new Scanner(System.in);
+        int jour = scanner.nextInt();
+        int mois = scanner.nextInt();
+        int annee = scanner.nextInt();
+
+        scanner.close();
+
+        return new Date(jour,mois,annee);
+    }
  /** compareTo compare l'obje appelant (this) avec parDate
      * @return 0  si elles sont égales
      *         1 si this est plus grande que parDate
@@ -70,6 +79,14 @@ public class Date {
 
 
         }
+
+    public Date dateDuLendemain(){
+        if (chJour < Date.dernierJourMois(chMois, chAnnee))
+            return new Date(chJour+1, chMois, chAnnee);
+        else if (chMois == 12)
+            return new Date(1,1,chAnnee+1);
+        return new Date(1, chMois+1, chAnnee);
+    }
 
     
 
