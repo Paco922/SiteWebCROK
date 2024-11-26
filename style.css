@@ -118,7 +118,7 @@ header nav ul li a:hover {
     border-radius: 10px;
 }
 
-.product button {
+.product a {
     background-color: var(--green);
     color: var(--black);
     padding: 10px 20px;
@@ -129,7 +129,7 @@ header nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.product button:hover {
+.product a:hover {
     background-color: var(--white);
     color: var(--green);
 }
@@ -143,6 +143,16 @@ footer {
     color: var(--white);
 }
 
+
+#PCBureauAccueil img{
+    width: 450px;
+    height: 700px;
+}
+
+#PCBureauGamingAccueil{
+    width: auto;
+    height: 230px;
+
 #ordi1{
     width: 300px;
     margin-left: 32px;
@@ -152,4 +162,5 @@ footer {
 
 #ordi1 img {
     width: 250px;
+
 }
